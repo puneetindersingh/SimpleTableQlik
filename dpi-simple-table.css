@@ -2,3 +2,8 @@
 .qv-object-dpi-simple-table div.qv-object-content-container {
 	overflow: auto;
 }
+.qv-object-dpi-simple-table table
+{
+
+	font-size:15px;
+}
