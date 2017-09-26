@@ -1,1 +1,0 @@
-{"name":"RequestError","message":"The request returned an unexpected result","status":500,"headers":{"cache-control":"private, must-revalidate, max-age=0","date":"Tue, 26 Sep 2017 01:04:41 GMT","expires":"Tue, 26 Sep 2017 01:04:42 GMT"},"body":{"link":{},"errors":[{"message":"Unsupported Media Type","status":415}]}}
