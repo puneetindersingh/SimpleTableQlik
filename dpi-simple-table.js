@@ -169,7 +169,7 @@ define(["jquery", "text!./dpi-simple-table.css"], function($, cssContent) {'use 
 					label: 'Image Options',
 					type: 'items',
 					items : {
-						images : {				
+						images : {
 							  type: "boolean",
 							  component: "switch",
 							  translation: "Enable Embedded Images",
@@ -203,7 +203,7 @@ define(["jquery", "text!./dpi-simple-table.css"], function($, cssContent) {'use 
 		},
 		paint : function($element, layout) {
 			var element_height=$element.height()-60;
-			var html = "<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css'><script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js'></script><table data-toggle='table' data-height="+element_height+" data-row-style='rowStyle' class='table-no-bordered'><thead><tr>", self = this, lastrow = 0, dimcount = this.backendApi.getDimensionInfos().length;
+			var html = "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.css'><script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.js'></script><table data-classes='table table-hover' data-toggle='table' data-height="+element_height+" data-row-style='rowStyle' class='tablebordered'><thead><tr>", self = this, lastrow = 0, dimcount = this.backendApi.getDimensionInfos().length;
 			console.log($element.height());
 			console.log("Test");
 			function deriveLabels (input) {
@@ -272,7 +272,7 @@ define(["jquery", "text!./dpi-simple-table.css"], function($, cssContent) {'use 
 						var labelAddressArray = deriveLabels(cell.qText);
 						var label = labelAddressArray[0];
 						var address = labelAddressArray[1];
-					
+
 						// toggle selectable for links, so that when you click a link, it won't necessarily drill to it
 						var selectable = '';
 
@@ -282,15 +282,15 @@ define(["jquery", "text!./dpi-simple-table.css"], function($, cssContent) {'use 
 						else {
 							if( ~address.slice(0,4).toLowerCase()==='http' ||
 								~address.slice(0,3).toLowerCase()==='www' ||
-								~address.toLowerCase().indexOf('.com') || 
-								~address.toLowerCase().indexOf('.net')|| 
-								~address.toLowerCase().indexOf('.edu') || 
+								~address.toLowerCase().indexOf('.com') ||
+								~address.toLowerCase().indexOf('.net')||
+								~address.toLowerCase().indexOf('.edu') ||
 								~address.toLowerCase().indexOf('.org') ||
 								~address.toLowerCase().indexOf('.gov')
-								) 
+								)
 							{
 								selectable = '';
-							} 
+							}
 							else {
 									selectable = 'selectable';
 							}
@@ -368,7 +368,7 @@ define(["jquery", "text!./dpi-simple-table.css"], function($, cssContent) {'use 
 						}
 
 				});
-				html += '</tr>';			    
+				html += '</tr>';
 			});
 			html += "</tbody></table>";
 			$element.html(html);
@@ -382,10 +382,3 @@ define(["jquery", "text!./dpi-simple-table.css"], function($, cssContent) {'use 
 		}
 	};
 });
-
-
-
-
-
-
-
