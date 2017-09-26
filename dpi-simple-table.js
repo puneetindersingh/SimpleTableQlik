@@ -202,7 +202,7 @@ define(["jquery", "text!./dpi-simple-table.css"], function($, cssContent) {'use 
 			canTakeSnapshot : true
 		},
 		paint : function($element, layout) {
-			var html = "<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css'><script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js'></script><table data-toggle='table' data-height='800' data-row-style='rowStyle' class='table-no-bordered'><thead><tr>", self = this, lastrow = 0, dimcount = this.backendApi.getDimensionInfos().length;
+			var html = "<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css'><script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js'></script><table data-toggle='table' data-height='400' data-row-style='rowStyle' class='table-no-bordered'><thead><tr>", self = this, lastrow = 0, dimcount = this.backendApi.getDimensionInfos().length;
 			function deriveLabels (input) {
 				var address='';
 				var label='';
