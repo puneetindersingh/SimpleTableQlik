@@ -1,5 +1,4 @@
 define(["jquery", "text!./dpi-simple-table.css"], function($, cssContent) {'use strict';
-
 	$("<style>").html(cssContent).appendTo("head");
 	return {
 		initialProperties : {
@@ -203,9 +202,7 @@ define(["jquery", "text!./dpi-simple-table.css"], function($, cssContent) {'use 
 			canTakeSnapshot : true
 		},
 		paint : function($element, layout) {
-		
-			var html = "<table><thead><tr>", self = this, lastrow = 0, dimcount = this.backendApi.getDimensionInfos().length;
-			// handle link address and link labels depending on the link option settings
+			var html = "<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css'><script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js'></script><table data-toggle='table' data-height='800' data-row-style='rowStyle' class='table-no-bordered'><thead><tr>", self = this, lastrow = 0, dimcount = this.backendApi.getDimensionInfos().length;
 			function deriveLabels (input) {
 				var address='';
 				var label='';
@@ -249,8 +246,7 @@ define(["jquery", "text!./dpi-simple-table.css"], function($, cssContent) {'use 
 
 			//render titles
 			$.each(this.backendApi.getDimensionInfos(), function(key, value) {
-				html +=  '<th  align="left">' + value.qFallbackTitle + '</th>';
-				
+				html += '<th align="left">' + value.qFallbackTitle + '</th>';
 			});
 			$.each(this.backendApi.getMeasureInfos(), function(key, value) {
 				html += '<th align="left">' + value.qFallbackTitle + '</th>';

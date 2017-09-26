@@ -1,72 +1,25 @@
 /* CSS */
 .qv-object-dpi-simple-table div.qv-object-content-container {
 	overflow: auto;
-	
 }
-.qv-object-dpi-simple-table td
-{
-position:auto;
-	border-top: 10px solid #fff;
-	border-right: 10px solid #fff;
-	white-space: normal;
-	
-	
-	
-	cursor: default;
-	font-size: 12px;
-	 border-bottom:1px solid #eee;
-  border: 2px solid #B3B3B3;
-  color: #000;
-  padding: 10px 25px;
-  background-color: #FFFFFF;
-    color: #595959;
-}
+.qv-object-dpi-simple-table td,
 .qv-object-dpi-simple-table th {
-position:auto;
 	border-top: 10px solid #fff;
 	border-right: 10px solid #fff;
 	white-space: normal;
-	
-	
-	
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
 	cursor: default;
-	font-size: 12px;
+	font-size: 13px;
 	 border-bottom:1px solid #eee;
-  border: 2px solid #B3B3B3;
+
   color: #000;
   padding: 10px 25px;
-  background-color: #FFFFFF;
-    color: #595959;
 }
-.
 .qv-object-dpi-simple-table td.numeric {
 	text-align: right;
 }
 .qv-object-dpi-simple-table button {
 	width: 100%;
 }
-
-.qv-object-dpi-simple-table thead
-{
-position:auto;
-padding-bottom:50px;
-font-size: 13px;
-}
-
-tbody
-{
-padding-top:50px;
-
-position:auto;
-
-}
-.qv-object-dpi-simple-table tr
-{
-position:auto;
-width:inherit;
-
-}
-
-
-
-
