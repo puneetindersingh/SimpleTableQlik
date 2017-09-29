@@ -4,6 +4,9 @@
 }
 .qv-object-dpi-simple-table table
 {
-
+	font-weight: normal;
+   color: #808080;
+	background-color: #FFFFFF;
 	font-size:15px;
+
 }

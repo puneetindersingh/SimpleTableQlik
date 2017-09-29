@@ -203,9 +203,10 @@ define(["jquery", "text!./dpi-simple-table.css"], function($, cssContent) {'use 
 		},
 		paint : function($element, layout) {
 			var element_height=$element.height()-60;
-			var html = "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.css'><script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.js'></script><table class='tableEdit' data-classes='table table-hover' data-toggle='table' data-height="+element_height+" data-row-style='rowStyle' class='tablebordered'><thead><tr>", self = this, lastrow = 0, dimcount = this.backendApi.getDimensionInfos().length;
-			console.log($element.height());
-			console.log("Test");
+			console.log(element_height);
+			var html = "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.css'><script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.js'></script><table  data-classes='table table-hover' data-toggle='table' data-height='"+element_height+"' data-row-style='rowStyle' class='tablebordered'><thead><tr>", self = this, lastrow = 0, dimcount = this.backendApi.getDimensionInfos().length;
+			//console.log($element.height());
+
 			function deriveLabels (input) {
 				var address='';
 				var label='';
