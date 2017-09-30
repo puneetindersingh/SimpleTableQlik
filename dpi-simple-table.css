@@ -10,3 +10,12 @@
 	font-size:15px;
 
 }
+@font-face {
+    font-family: "na";
+    src: url("https://analytics.castsolutions.com.au/resources/fonts/qlikview-sans.ttf");
+}
+
+.tablebordered
+{
+	font-family: 'na';
+}
