@@ -198,6 +198,10 @@ define(["jquery", "text!./dpi-simple-table.css"], function($, cssContent) {'use 
 				}
 			}
 		},
+		support : {
+export: true
+}
+		,
 		snapshot : {
 			canTakeSnapshot : true
 		},
@@ -380,6 +384,8 @@ define(["jquery", "text!./dpi-simple-table.css"], function($, cssContent) {'use 
 					$element.find("[data-dimension='"+ dim +"'][data-value='"+ value+"']").toggleClass("selected");
 				}
 			});
+
+		return qlik.Promise.resolve();
 		}
-	};
-});
+		};
+		});
