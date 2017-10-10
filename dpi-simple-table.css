@@ -2,21 +2,13 @@
 .qv-object-dpi-simple-table div.qv-object-content-container {
 	overflow: auto;
 }
-.qv-object-dpi-simple-table td,
-.qv-object-dpi-simple-table th {
+.qv-object-dpi-simple-table table
+{
+	font-weight: normal;
+   color: #808080;
+	background-color: #FFFFFF;
+	font-size:15px;
 
-	white-space: normal;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	vertical-align: middle;
-	cursor: default;
-	font-size: 13px;
-}
-.qv-object-dpi-simple-table td.numeric {
-	text-align: center;
-}
-.qv-object-dpi-simple-table button {
-	width: 100%;
 }
 @font-face {
     font-family: "na";
@@ -26,12 +18,4 @@
 .tablebordered
 {
 	font-family: 'na';
-}
-th,tr{
-	border: 1px lightgrey solid;
-}
-thead
-{
-	font-size: 15px;
-
 }

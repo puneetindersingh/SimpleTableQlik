@@ -208,7 +208,7 @@ export: true
 		paint : function($element, layout) {
 			var element_height=$element.height()-60;
 			console.log(element_height);
-			var html = "<table id='test'><thead><tr>", self = this, lastrow = 0, dimcount = this.backendApi.getDimensionInfos().length;
+			var html = "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.css'><script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.js'></script><table data-classes='table table-hover' data-toggle='table' data-height='"+element_height+"' data-row-style='rowStyle' class='tablebordered'><thead><tr>", self = this, lastrow = 0, dimcount = this.backendApi.getDimensionInfos().length;
 			//console.log($element.height());
 
 			function deriveLabels (input) {
@@ -308,8 +308,7 @@ export: true
 					}
 					// enable selectable
 					if(key < dimcount && cell.qElemNumber > -1) {
-
-												html += selectable + "' data-value='" + cell.qElemNumber + "' data-dimension='" + key + "'";
+						html += selectable + "' data-value='" + cell.qElemNumber + "' data-dimension='" + key + "'";
 					} else {
 						html += "'";
 					}
@@ -378,9 +377,7 @@ export: true
 			});
 			html += "</tbody></table>";
 			$element.html(html);
-
 		  	$element.find('.selectable').on('qv-activate', function() {
-
 				if(this.hasAttribute("data-value")) {
 					var value = parseInt(this.getAttribute("data-value"), 10), dim = parseInt(this.getAttribute("data-dimension"), 10);
 					self.selectValues(dim, [value], true);
